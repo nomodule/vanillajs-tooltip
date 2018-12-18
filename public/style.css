@@ -1,0 +1,104 @@
+:root {
+	--primary: #2e86de;
+	--danger: #ee5253;
+	--info: #0abde3;
+	--success: #10ac84;
+	--default: #222f3e;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	color: #333;
+	font-weight: 300;
+}
+
+.container {
+	max-width: 500px;
+	margin: 40px auto;
+	padding: 20px;
+}
+
+/* TinyTooltip css starts here */
+[data-tinytooltip] {
+	position: relative;
+	display: inline-block;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	padding: 0 5px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.TinyTooltip {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: tomato;
+	color: #fff;
+	font-family: sans-serif;
+	font-size: 16px;
+	padding: 2px 5px;
+	border-radius: 3px;
+	box-shadow: 0 0 50px rgba(34, 47, 62, 0.5);
+}
+
+.TinyTooltip::before {
+	content: "";
+	position: absolute;
+	bottom: -17px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-width: 10px;
+	border-style: solid;
+}
+
+.TinyTooltip--primary {
+	background: var(--primary);
+	box-shadow: 0 0 50px rgba(46, 134, 222, 0.5);
+}
+
+.TinyTooltip--primary::before {
+	border-color: rgb(46, 134, 222) transparent transparent transparent;
+}
+
+.TinyTooltip--danger {
+	background: var(--danger);
+	box-shadow: 0 0 50px rgba(238, 82, 83, 0.5);
+}
+
+.TinyTooltip--danger::before {
+	border-color: rgb(238, 82, 83) transparent transparent transparent;
+}
+
+.TinyTooltip--info {
+	background: var(--info);
+	box-shadow: 0 0 50px rgba(10, 189, 227, 0.5);
+}
+
+.TinyTooltip--info::before {
+	border-color: rgb(10, 189, 227) transparent transparent transparent;
+}
+
+.TinyTooltip--success {
+	background: var(--success);
+	box-shadow: 0 0 50px rgba(16, 172, 132, 0.5);
+}
+
+.TinyTooltip--success::before {
+	border-color: rgb(16, 172, 132) transparent transparent transparent;
+}
+
+.TinyTooltip--default {
+	background: var(--default);
+	box-shadow: 0 0 50px rgba(34, 47, 62, 0.5);
+}
+
+.TinyTooltip--default::before {
+	border-color: rgb(34, 47, 62) transparent transparent transparent;
+}
